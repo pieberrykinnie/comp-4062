@@ -1,0 +1,26 @@
+%% Page format required by the course (takes precedence over the CVPR template)
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage{amsmath} % before newtxmath, which also provides the amssymb symbols
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath} % Times
+\usepackage{setspace}
+\doublespacing % setspace keeps floats and footnotes single-spaced
+
+%% Content
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{cite} % IEEE-style numeric citations, e.g. [1]--[3]
+\usepackage[hyphens]{url}
+\usepackage[colorlinks,allcolors=MidnightBlue]{hyperref}
+\usepackage[capitalize]{cleveref} % must load after hyperref
+
+%% Inline annotations
+\newcommand{\TODO}[1]{\textbf{\color{red}[TODO: #1]}}
+%% Uncomment before submitting to hide every remaining TODO
+% \renewcommand{\TODO}[1]{}
+
+%% Empty box standing in for a figure until the real one exists
+\newcommand{\placeholderfig}[1]{\fbox{\parbox[c][#1][c]{0.95\linewidth}{\centering Figure placeholder}}}

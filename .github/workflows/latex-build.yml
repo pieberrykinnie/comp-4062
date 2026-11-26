@@ -1,0 +1,40 @@
+name: LaTeX Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v3
+      with:
+        working_directory: report
+        root_file: main.tex
+
+    - name: Check for LaTeX errors and warnings
+      run: |
+        if grep -q "^!" report/main.log; then
+          echo "LaTeX errors found:"
+          grep "^!" report/main.log
+          exit 1
+        elif grep -q "Warning:" report/main.log; then
+          echo "LaTeX warnings found:"
+          grep "Warning:" report/main.log
+          echo "Build completed with warnings."
+        else
+          echo "LaTeX build completed successfully without errors or warnings."
+        fi
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v4
+      with:
+        name: report
+        path: report/main.pdf

@@ -1,0 +1,44 @@
+% COMP 4062 final report.
+% Course format rules (they override any venue template): 8.5" x 11", single-sided,
+% 12-pt Times, double spaced, 3/4" margins, at most 20 pages. Section structure follows CVPR/ICCV.
+\documentclass[12pt,letterpaper]{article}
+
+\input{preamble}
+
+%%%%%%%%% TITLE PAGE - PLEASE UPDATE
+\newcommand{\projecttitle}{Project Title}
+\newcommand{\studentname}{Peter Vu}
+\newcommand{\studentnumber}{7990597}
+\newcommand{\coursename}{COMP 4062: Deep Learning}
+\newcommand{\instructorname}{Dr. Christopher Henry}
+\newcommand{\reportdate}{\today}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{2in}
+  {\LARGE\bfseries \projecttitle\par}
+  \vspace{1in}
+  {\large \studentname\par}
+  {\large Student No.\ \studentnumber\par}
+  \vspace{0.5in}
+  {\large \coursename\par}
+  {\large Instructor: \instructorname\par}
+  \vspace{0.5in}
+  {\large \reportdate\par}
+\end{titlepage}
+
+\input{sec/0_abstract}
+\input{sec/1_intro}
+\input{sec/2_related}
+\input{sec/3_method}
+\input{sec/4_setup}
+\input{sec/5_results}
+\input{sec/6_edi}
+\input{sec/7_conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{main}
+
+\end{document}

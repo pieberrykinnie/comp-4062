@@ -221,3 +221,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# LaTeX stuff
+*.aux
+*.bak
+*.bbl
+*.blg
+*.brf
+*.log
+*.out
+*.fls
+*.synctex.gz
+*.fdb_latexmk
+*.pdf
+.DS_Store
