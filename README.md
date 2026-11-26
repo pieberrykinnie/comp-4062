@@ -23,7 +23,3 @@ TBA
 ### Run the inference/evaluation script
 
 TBA
-
-## Files unmodified from the original author
-
-* `requirements.txt`: for obvious reasons
